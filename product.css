@@ -1,0 +1,36 @@
+#smallPics img{
+    width: 20%;
+    float: left;
+}
+@media (max-width: 768px) {
+    .cellphone{
+        margin: 50px 30px;
+    }
+}
+
+#big{
+    width: 100%;
+    height: 436px;
+    overflow: hidden;
+    position: relative;
+    border:1px solid #eee;
+    border-radius: 4px;
+    display: none;
+}
+
+#look_girl{
+    position: absolute;
+    left: 0px;
+    top:0px;
+}
+
+#move{
+    width: 100px;
+    height: 100px;
+    background:#000;
+    opacity: .5;
+    position: absolute;
+    display: none;
+    left: 0px;
+    top: 0px;
+}

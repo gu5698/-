@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            width: 100%;
+            max-width: 960px;
+            background-color: #ccc;
+            margin: auto;
+        }
+        .movie{
+            margin-left: 10%;
+            height: 0;
+            box-sizing: border-box;
+            border: 5px solid rgba(255, 255, 255, 0.5);
+            background: url("https://picsum.photos/200/200?random=1") no-repeat;
+            background-size: 100%;
+            width: 52.083333%;
+            padding-bottom: 37.5%;
+            position: relative;
+            transition: background-size 1s, padding-bottom 1s;
+        }
+        .movie:hover {
+            background-size: 110%;
+        }
+        /* .vic{
+            position: relative;
+        } */
+        .txt{
+            left: -10px;
+            width: calc(100% + 20px);
+            height: 100%;
+            box-sizing: border-box;
+            position: absolute;
+            padding: 0 10px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            /* transition: right 1s; */
+        }
+        /* .txt:hover{
+            left: 0;
+            width: 100%;
+        } */
+        .txt p{
+            margin-top: 100px;
+            padding: 5px;
+            /* overflow-y: auto; */
+            background-color: aliceblue;
+            padding-top: 50px;
+            transition: margin-top 1s;
+        }
+        @media (max-width: 768px) {
+            .movie:hover{
+                padding-bottom: 60%;
+            }
+            .icon{
+                position: absolute;
+                bottom: -5px;
+                right: 10px;
+                background-color: rgba(255, 255, 255, 0.8);
+                z-index: 3;
+                transition: opacity 1s;
+                opacity: 1;
+            }
+            .txt:hover .icon{
+                opacity: 0;
+            }
+        }
+        .icon{
+            display: none;
+        }
+        .txt:hover p{
+            margin-top: 0;
+        }
+        .time{
+            z-index: 1;
+            left: 24px;
+            /* right: -10px; */
+            position: absolute;
+            width: 90%;
+            text-align: right;
+            overflow: visible;
+            transition: left 1s;
+        }
+        .time span{
+            background-color: aliceblue;
+        }
+        .txt:hover .time{
+            left: 0px;
+            /* overflow: visible; */
+        }
+        .title{
+            z-index: 1;
+            left: 0;
+            position: absolute;
+            width: 200px;
+            transition: left 1s;
+        }
+        .title span{
+            background-color: aliceblue;
+        }
+        .txt:hover .title{
+            left: 20px;
+            /* overflow: visible; */
+        }
+        .con{
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .txt:hover .con{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="wrap">
+                    <div class="movie">
+                        <div class="txt">
+                            <div class="time">
+                                <span>1991-08-22</span>
+                            </div>
+                            <div class="title">
+                                <span>隨意來打</span>
+                            </div>
+                            <div class="con">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem odio porro numquam aliquam fugit a, est, cumque officia nam molestiae aspernatur consectetur eveniet ipsam? Fugiat debitis recusandae sapiente enim corrupti voluptatem mollitia vitae facilis cum nostrum repellendus laboriosam et libero, dolorem. Ratione debitis delectus earum doloribus, voluptatum accusamus, consectetur molestiae, dolores excepturi obcaecati expedita corrupti sint dolor explicabo harum quam voluptatem reprehenderit consequuntur saepe illo nisi, tempore totam deserunt optio nulla. Ut soluta perferendis commodi, quaerat dolores ratione ducimus, qui labore explicabo omnis eaque porro doloremque excepturi laborum ad quisquam molestiae id nobis, assumenda ullam illo! Tempora sapiente rerum nostrum mollitia aut, minus obcaecati dicta eos excepturi ratione culpa corporis porro maxime, nemo quaerat. Sapiente harum officiis ad quasi eveniet, accusamus culpa cupiditate consequuntur, explicabo doloribus pariatur repellendus voluptatum eaque voluptatibus itaque earum illum minima, enim excepturi aut hic rerum. Totam illum maiores nisi numquam cum blanditiis voluptas excepturi repudiandae deleniti recusandae saepe, voluptate, et repellendus similique hic? Molestiae nam, alias. Amet voluptatibus fugiat fuga hic, itaque totam pariatur esse repellat fugit laborum error sapiente repellendus, reiciendis eveniet quasi est soluta, non, iusto tenetur. Reprehenderit numquam cumque, veniam nihil quaerat facilis tenetur sunt, quae, suscipit officia inventore doloremque tempora repellat!</p>
+                            </div>
+                            <div class="icon">
+                                <img src="piu.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ml-6 col-12 col-md-6 ">
+                <div class="movie">
+                    <div class="txt">
+                        <div class="time">
+                            <span>1991-08-22</span>
+                        </div>
+                        <div class="title">
+                            <span>隨意來打</span>
+                        </div>
+                        <div class="con">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem odio porro numquam aliquam fugit a, est, cumque officia nam molestiae aspernatur consectetur eveniet ipsam? Fugiat debitis recusandae sapiente enim corrupti voluptatem mollitia vitae facilis cum nostrum repellendus laboriosam et libero, dolorem. Ratione debitis delectus earum doloribus, voluptatum accusamus, consectetur molestiae, dolores excepturi obcaecati expedita corrupti sint dolor explicabo harum quam voluptatem reprehenderit consequuntur saepe illo nisi, tempore totam deserunt optio nulla. Ut soluta perferendis commodi, quaerat dolores ratione ducimus, qui labore explicabo omnis eaque porro doloremque excepturi laborum ad quisquam molestiae id nobis, assumenda ullam illo! Tempora sapiente rerum nostrum mollitia aut, minus obcaecati dicta eos excepturi ratione culpa corporis porro maxime, nemo quaerat. Sapiente harum officiis ad quasi eveniet, accusamus culpa cupiditate consequuntur, explicabo doloribus pariatur repellendus voluptatum eaque voluptatibus itaque earum illum minima, enim excepturi aut hic rerum. Totam illum maiores nisi numquam cum blanditiis voluptas excepturi repudiandae deleniti recusandae saepe, voluptate, et repellendus similique hic? Molestiae nam, alias. Amet voluptatibus fugiat fuga hic, itaque totam pariatur esse repellat fugit laborum error sapiente repellendus, reiciendis eveniet quasi est soluta, non, iusto tenetur. Reprehenderit numquam cumque, veniam nihil quaerat facilis tenetur sunt, quae, suscipit officia inventore doloremque tempora repellat!</p>
+                        </div>
+                        <div class="icon">
+                            <img src="piu.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        function showNews(){
+            document.getElementsByClassName('con').classList.remove('view');
+
+        };
+        function init(){
+            document.getElementsByClassName('txt').onclick = showNews;
+        };
+        function showLarge(e){
+            var small = e.target;
+            document.getElementById("large").src = small.src.replace("small","big").replace("SP_","");
+        }
+
+        function init(){
+            var imgs = document.querySelectorAll("#smallPics img");
+            for(var i=0; i<imgs.length; i++){
+                imgs[i].addEventListener("click", showLarge, false);
+            }
+        }
+        window.onload = init;
+    </script> -->
+</body>
+</html>

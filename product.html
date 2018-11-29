@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>best seller</title>
+
+    <!-- reset CSS -->
+    <link rel="stylesheet" type="text/css" href="resetCSS.css">
+
+    <!-- grid CSS -->
+    <link rel="stylesheet" type="text/css" href="grid-12.css" >
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+
+    <link rel="stylesheet" href="">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="product.css">
+
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 ml-2">
+                <div class="cellphone">
+                    <div id="small">
+                        <img id="large" src="images/big/M1_001.jpeg">
+                        <p id="move"></p>
+                    </div>
+
+                    <div id="smallPics">
+                        <img src="images/small/M1_SP_001.jpeg" />
+                        <img src="images/small/M1_SP_002.jpeg" />
+                        <img src="images/small/M1_SP_003.jpeg" />
+                        <img src="images/small/M1_SP_004.jpeg" />
+                        <!-- <img src="images/small/M1_SP_005.jpeg" /> -->
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-5">
+                <div id="big">
+                    <img id="look_girl" src="images/big/M1_001.jpeg">
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        function showLarge(e){
+            var small = e.target;
+            document.getElementById("large").src = small.src.replace("small","big").replace("SP_","");
+            document.getElementById("look_girl").src = small.src.replace("small","big").replace("SP_","");
+        }
+
+        function init(){
+            var imgs = document.querySelectorAll("#smallPics img");
+            for(var i=0; i<imgs.length; i++){
+                imgs[i].addEventListener("click", showLarge, false);
+            }
+        }
+
+        window.onload = init;
+    </script>
+    <script src="fangdajing.js"></script>
+
+</body>
+</html>
